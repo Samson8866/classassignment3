@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<h1>Temperature Converter</h1>
+
+<div id="weather"></div>
+
+<p><input type="text" id="c" onkeyup="convert('C')">Degree Celsius</p>
+<p><input type="text" id="f" onkeyup="convert('f')">Degree Fahrenheit</p>
+
+
+<script type="text/javascript">
+function convert(degree){
+    var x;
+    if(degree =="C"){
+        x = document.getElementById("c").value * 9/5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    }else{
+        x = document.getElementById("f").value - 32 * 5/9;
+        document.getElementById("c").value = Math.round(x);
+    }
+}
+</script>
+<body>
+    
+</body>
+</html>
